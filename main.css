@@ -1,0 +1,59 @@
+body { -webkit-font-smoothing: antialiased; overflow-x: hidden;}
+.navbar-fixed {
+  position: relative;
+  height: 56px;
+  z-index: 997;
+}
+
+.navbar-fixed nav {
+  position: fixed;
+}
+
+.herosection{background-image: url('images/my-img.png') !important; color: white;top: 0;}
+.herotextwrap{
+	display: flex;
+	align-self: flex-start;
+	padding: 2em;
+	background-color: rgba(0, 40, 0, 0.7);
+
+}
+
+.herotextwrap > h1 {font-size: 3em;}
+
+@media only screen and (max-width: 1000px) {
+	 .herotextwrap > h1 {font-size: 2em;}
+	}
+.aboutcontainer,.footer{
+	background-color: rgb(0,40,0);
+}
+
+nav{
+	background-color: white;
+	box-shadow: none;
+	position: sticky;
+	height: 3em;
+	line-height: 3em;
+	}	
+
+nav ul{margin-right: 2em; }
+
+nav ul li,nav ul a{ color: #004000; width: fit-content;font-weight: 500; font-size: 1.1em;}
+nav svg{
+	height: 2.8em;
+	margin: 0px 5em;
+}	
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 20%;
+     }
+  nav svg{
+	height: 2em;
+	margin: 5px 5em;
+	}   
+ }
+
+ .appfront img{width: 70vw; overflow-y: visible; object-fit: cover; height: 80em; top: 0;object-position: center top; 
+ @media only screen and (max-width: 900px) {
+  .appfront img{width: 90vw; overflow-y: visible; object-fit: cover;}  
+ }
