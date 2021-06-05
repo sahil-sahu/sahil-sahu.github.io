@@ -37,7 +37,7 @@ nav{
 
 nav ul{margin-right: 2em; }
 
-nav ul li,nav ul a{ color: #004000; width: fit-content;font-weight: 500; font-size: 1.1em;}
+nav ul li,nav ul a{ color: #004000; width: fit-content;font-weight: 500; font-size: 1.1em;z-index: 99999999;}
 nav svg{
 	height: 2.8em;
 	margin: 0px 5em;
@@ -45,15 +45,21 @@ nav svg{
 
 @media only screen and (max-width: 992px) {
   nav .brand-logo {
-    left: 20%;
+    left: 0;
+    float: left;
+    width: 0px;
+    /*transform: translateX(-2em);*/
      }
   nav svg{
 	height: 2em;
-	margin: 5px 5em;
+	margin: 1px;
+	transform: translateX(1.7em);
+	position: relative;
 	}   
  }
 
- .appfront img{width: 70vw; overflow-y: visible; object-fit: cover; height: 80em; top: 0;object-position: center top; 
+ .appfront img{width: 70vw; overflow-y: visible; object-fit: cover; height: 80em; top: 0;object-position: right top; 
  @media only screen and (max-width: 900px) {
   .appfront img{width: 90vw; overflow-y: visible; object-fit: cover;}  
  }
+

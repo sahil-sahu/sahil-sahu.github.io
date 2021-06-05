@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +19,15 @@
       <link rel="stylesheet" href="main.css">
       <link href="base.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CPlayfair+Display:regular,italic,900" media="all">
-      <link href="images/Sahil.svg" rel="shortcut icon" type="image/x-icon">
-      <link href="images/Sahil.svg" rel="apple-touch-icon">
+      <link href="images/Sahil.png" rel="shortcut icon" type="image/x-icon">
+      <link href="images/Sahil.png" rel="apple-touch-icon">
 
    </head>
    <body class="body" id="top">
     <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-        <a href="#top" class="brand-logo">
+        <a href="#top" class="brand-logo" style="width: 150px;">
         <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
          <g id="Sahil">
          <g id="hex">
@@ -39,7 +40,7 @@
          </svg>
 
          </a>
-        <ul class="right">
+        <ul class="right" style="z-index: 99999;">
           <li><a href="#about">about</a></li>
           <li><a href="#work">work</a></li>
           <li><a href="mailto:sahillu2003@gmail.com">contact</a></li>
@@ -47,47 +48,81 @@
       </div>
     </nav>
   </div>
-      <div class="herosection">
-         <div class="herotextwrap">
-            <h1 class="heroh1" style="color: white;">Sahil Sahu</h1>
-            <div class="heroline" style="background-color: white;"></div>
-            <h1 class="heroh1" style="color: white;">is a Fullstack Web Developer work with businesses & brands.</h1>
-         </div>
+   <div class="herosection">
+      <div class="herotextwrap">
+         <h1 class="heroh1" style="color: white;">Sahil Sahu</h1>
+         <div class="heroline" style="background-color: white;"></div>
+         <h1 class="heroh1" style="color: white;">is a Fullstack Web Developer work with businesses & brands.</h1>
       </div>
+   </div>
       <div id="about" class="aboutsection">
          <div class="aboutcontainer">
             <div class="aboutrow w-row">
                <div class="w-col w-col-6 w-col-stack">
                   <br>
-                  <h2 class="h2-white">Work.</h2>
-                  <div class="abouttext">As a full stack developer I help early stage businesses with everything from web hosting to designing,developement and digital marketing.
+                  <h2 class="h2-white"><img src="images/tools1.svg" alt="What I do as my" /> Work.</h2>
+                  <div class="abouttext" style="padding-left: 2em;">As a full stack developer I help early stage businesses with everything from web hosting to designing,developement and digital marketing.
                      I’ve had the pleasure to collaborate with top teams working across a variety of B2C & B2B industries in India and across the globe.
                   </div>
                </div>
             </div>
             <div class="aboutrow w-row">
                <div class="w-col w-col-6 w-col-stack">
-                  <h2 class="h2-white">Skills.</h2>
-                  <div class="abouttext">
-                     <ol>
-                        <li>HTML,CSS & Javascript</li>
-                        <li>React JS</li>
-                        <li>Firebase</li>
-                        <li>Django</li>
-                        <li>Scrapy</li>
-                        <li>Linux</li>
+                  <h2 class="h2-white"><img src="images/settings1.svg" alt=""> Skills.</h2>
+                  <ol style="display: flex; flex-wrap: wrap; max-width: 55em; ">
+                     <li class="apnaskil col s6" style="color: white; display: flex; flex-direction: column; margin: 1em; margin-left: 2em;max-width: 28em;min-width: 15em; overflow: visible;">
+                        <div class="aptxt"  style="max-width: 28em;min-width: 15em;">1.<span class="aph" style="color: white; margin: 2px 10px; display: flex; align-items: center;"><img style="height: 2em; margin-right: 4px;" src="https://img.icons8.com/color/48/000000/html-5--v1.png"/><img style="height: 2em; margin-right: 2px;" src="https://img.icons8.com/color/48/000000/css3.png"/><img style="height: 2em; margin-right: 4px;" src="https://img.icons8.com/color/50/000000/javascript.png"/> Basic Frontend</span><span class="apper" style="float: right;">99%</span></div>
+                        <div class="apbar" style="max-width: 20em; border: 1px solid white; height: 0.4em; margin: 5px 1.5em;border-radius: 25px; background-color: white;"></div>
+                     </li>
+                      <li class="apnaskil col s6" style="max-width: 28em;width: max-content;min-width: 15em;color: white; display: flex; flex-direction: column; margin: 0.8em; margin-left: 2em;">
+                        <div class="aptxt"  style="max-width: 28em;min-width: 15em;">2.<span class="aph" style="color: white; margin: 2px 10px; display: flex; align-items: center;"><img style="height: 2em; margin-right: 4px;" src="https://img.icons8.com/color/48/000000/react-native.png"/> React JS</span><span class="apper" style="float: right;">70%</span></div>
+                        <div class="apbar" style="max-width: 20em; border: 1px solid white; height: 0.4em; margin: 7px 1.5em;border-radius: 25px; background: linear-gradient(to right, white 70%, #004000 30%);"></div>
+                     </li>
+                      <li class="apnaskil" style="max-width: 28em;width: max-content;min-width: 15em;color: white; display: flex; flex-direction: column; margin: 1em; margin-left: 2em;">
+                        <div class="aptxt"  style="max-width: 28em;min-width: 15em;">3.<span class="aph" style="color: white; margin: 2px 10px; display: flex; align-items: center;"><img  style="height: 2em; margin-right: 8px; background-color: white; border-radius: 25px;" src="https://img.icons8.com/material/24/000000/django.png"/>Django</span><span class="apper" style="float: right;">95%</span></div>
+                        <div class="apbar" style="max-width: 20em; border: 1px solid white; height: 0.4em; margin: 0px 1.5em;border-radius: 25px; background: linear-gradient(to right, white 95%, #004000 5%);"></div>
+                     </li>
+                      <li class="apnaskil" style="max-width: 28em;width: max-content;min-width: 15em;color: white; display: flex; flex-direction: column; margin: 1em; margin-left: 2em;">
+                        <div class="aptxt"  style="max-width: 28em;min-width: 15em;">4.<span class="aph" style="color: white; margin: 2px 10px; display: flex; align-items: center;"><img style="height: 2em; margin-right: 4px;" src="https://img.icons8.com/color/48/000000/firebase.png"/>Firebase</span><span class="apper" style="float: right;">80%</span></div>
+                        <div class="apbar" style="max-width: 20em; border: 1px solid white; height: 0.4em; margin: 0px 1.5em;border-radius: 25px; background: linear-gradient(to right, white 80%, #004000 10%);"></div>
+                     </li>
+                      <li class="apnaskil" style="max-width: 28em;width: max-content;min-width: 15em;color: white; display: flex; flex-direction: column; margin: 1em; margin-left: 2em;">
+                        <div class="aptxt"  style="max-width: 28em;min-width: 15em;">5.<span class="aph" style="color: white; margin: 2px 10px; display: flex; align-items: center;"><img style="height: 2em; margin-right: 8px;" src="images/Scrapy.png"/>Scrapy</span><span class="apper" style="float: right;">98%</span></div>
+                        <div class="apbar" style="max-width: 20em; border: 1px solid white; height: 0.4em; margin: 0px 1.5em;border-radius: 25px; background: linear-gradient(to right, white 98%, #004000 2%);"></div>
+                     </li>
+                     <li class="apnaskil" style="max-width: 28em;width: max-content;min-width: 15em;color: white; display: flex; flex-direction: column; margin: 1em; margin-left: 2em;">
+                        <div class="aptxt"  style="max-width: 28em;min-width: 15em;">6.<span class="aph" style="color: white; margin: 2px 10px; display: flex; align-items: center;"><img style="height: 2em; margin-right: 8px; background-color: white; border-radius: 25px;" src="https://img.icons8.com/color/48/000000/linux.png"/>Linux</span><span class="apper" style="float: right;">60%</span></div>
+                        <div class="apbar" style="max-width: 20em; border: 1px solid white; height: 0.4em; margin: 0px 1.5em;border-radius: 25px; background: linear-gradient(to right, white 60%, #004000 40%);"></div>
+                     </li>
+                  </ol>
+                 </div>
+                </div>  
+                          
+               <div class="w-col w-col-6 w-col-stack">
+                  <div class="w-col w-col-6 w-col-stack">
+                  <br>
+                  <h2 class="h2-white"><img src="images/tools1.svg" alt="What I do as my" /> Services.</h2>
+                  <div class="abouttext" style="padding-left: 2em;">I give following services to my clients at my gorgeous team <a style="color: #fff; border-bottom: 1px solid #fff;" href="https://contrivers.tk">Contrivers</a>:
+                  </div>
+                  <div class="bserve">
+                     <ol style="color: white; margin-left: 5em;">
+                        <li style="margin: 0.7em; font-size: 1.1em;">Website & App Development</li>
+                        <li style="margin: 0.7em; font-size: 1.1em;">Server SetUp</li>
+                        <li style="margin: 0.7em; font-size: 1.1em;">Digital Marketing</li>
+                        <li style="margin: 0.7em; font-size: 1.1em;">SEO service</li>
                      </ol>
                   </div>
                </div>
-               <div class="w-col w-col-6 w-col-stack">
-                  <div id="work" class="abouttext baselinkshift"><a href="mailto:sahilku2003@gmail.com" class="aboutlink">Email me</a> if you think we should be working together on interesting projects.</div>
+                  <div class="abouttext baselinkshift"><a href="mailto:sahilku2003@gmail.com" class="aboutlink">Email me</a> if you think we should be working together on interesting projects.</div>
+                  <div class="abouttext" style="margin: 1em;">OR</div>
+                  <div  class="abouttext">Reach me at <a href="https://www.linkedin.com/in/sahil-kumar-sahu-4a38801aa" class="aboutlink">LinkedIn</a> else at <a href="https://contrivers.tk" class="aboutlink">Contrivers</a> .</div>
                </div>
                <br>
             </div>
       </div>
       <br>
-      <h2 style="border-bottom: 3px solid #005000; width: 6em; height: 1.25em; text-align: center;margin: 0em auto 1em auto; color: #004000;">My Projects</h2>
-      <div" class="projectsection prospero">
+      <h2 id="work" style="border-bottom: 3px solid #004000; width: 6em; height: 1.25em; text-align: center;margin: 0em auto 1em auto; color: #004000;">My Projects</h2>
+      <div class="projectsection prospero">
          <div class="projectcontent">
             <h2 class="projecth2-white">JRM Building Solutions</h2>
             <p class="p-white">An interior designing and architecting company.I with team my <a style="color: #fff; border-bottom: 1px solid #fff;" href="https://contrivers.tk">Contrivers</a> made their whole online solutions in a profitable price.
