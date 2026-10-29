@@ -1,0 +1,184 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Val from '../components/Val.astro';
+import site from '../content/site.json';
+import experience from '../content/experience.json';
+import skills from '../content/skills.json';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const isTodo = (v: string) => v.startsWith('TODO(');
+const year = new Date().getFullYear();
+---
+<Base>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#top" class="logo" aria-label="Back to top">S<span>.</span></a>
+      <nav aria-label="Sections">
+        <a href="#experience">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M9 1.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"/></svg></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="kicker">{site.role} · {site.location}</p>
+        <h1>{site.name}</h1>
+        <p class="pitch">{site.pitch}</p>
+        <div class="actions">
+          {isTodo(site.resume)
+            ? <span class="btn btn-primary is-todo" title={site.resume}>Resume <mark class="todo">TODO(sahil)</mark></span>
+            : <a class="btn btn-primary" href={site.resume}>Resume ↓</a>}
+          {site.links.map((l) => <a class="btn" href={l.href}>{l.label}</a>)}
+        </div>
+      </div>
+
+      <figure class="query" aria-label="Profile, rendered as a SQL query">
+        <div class="query-bar"><span>bigquery</span><span>run ▸</span></div>
+        <pre><code><b>SELECT</b> name, role, builds
+<b>FROM</b>   engineers
+<b>WHERE</b>  city = <i>'Bhubaneswar'</i>
+  <b>AND</b>  ships_to_prod = <b>TRUE</b>
+<b>LIMIT</b>  1;</code></pre>
+        <div class="query-result">
+          <table>
+            <thead><tr><th>name</th><th>role</th><th>builds</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Sahil</td>
+                <td>SDE 1 @ ConvertCart<br />Co-founder @ Hyphunt</td>
+                <td>pipelines, recos, integrations</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption>1 row · 0 bytes billed · cache hit</figcaption>
+      </figure>
+    </section>
+
+    <!-- Three proof points -->
+    <section class="wrap proof" aria-label="At a glance">
+      <div class="proof-cell">
+        <span class="num">01</span>
+        <h2>Production data &amp; backend</h2>
+        <p>Owns recommendation, reporting and sync services on BigQuery.</p>
+      </div>
+      <div class="proof-cell">
+        <span class="num">02</span>
+        <h2>Deep in e-commerce platforms</h2>
+        <p>Shopify · BigCommerce · WooCommerce · Magento · Miva · Shift4Shop</p>
+      </div>
+      <div class="proof-cell">
+        <span class="num">03</span>
+        <h2>Ships end to end</h2>
+        <p>Co-founded Hyphunt and built its backend, infra and mobile app.</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="wrap section">
+      <h2 class="section-title"><span>01</span> Experience</h2>
+      {experience.map((job) => (
+        <article class="job">
+          <header class="job-head">
+            <h3>{job.company} <span class="job-role">/ {job.role}</span></h3>
+            <p class="job-dates"><Val v={job.dates} /></p>
+          </header>
+          <div class="job-body">
+            <p class="job-summary">
+              {job.summary}
+              {job.link && <> <a href={job.link.href}>{job.link.text} ↗</a></>}
+            </p>
+            <ul>
+              {job.bullets.map((b) => <li>{b}</li>)}
+            </ul>
+            {job.metrics && <p class="job-metrics"><Val v={job.metrics} /></p>}
+            <ul class="tags" aria-label="Stack">
+              {job.tags.map((t) => <li>{t}</li>)}
+            </ul>
+          </div>
+        </article>
+      ))}
+      <p class="edu">
+        <strong>Education</strong> — {site.education.degree}, {site.education.school} · <Val v={site.education.years} />
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="wrap section">
+      <h2 class="section-title"><span>02</span> Selected work</h2>
+      <div class="cards">
+        {projects.map(async (p) => {
+          const { Content } = await render(p);
+          return (
+            <article class:list={['card', { featured: p.data.featured }]}>
+              <p class="card-org">{p.data.featured ? 'Flagship · Co-founder' : p.data.org}</p>
+              <h3>{p.data.title}</h3>
+              <p class="card-problem">{p.data.problem}</p>
+              <div class="card-did"><Content /></div>
+              {p.data.todo && <p><mark class="todo">{p.data.todo}</mark></p>}
+              <ul class="tags">{p.data.tags.map((t) => <li>{t}</li>)}</ul>
+              {p.data.link && <a class="card-link" href={p.data.link}>{p.data.linkText ?? 'Visit'} ↗</a>}
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="wrap section">
+      <h2 class="section-title"><span>03</span> Skills</h2>
+      <div class="skills">
+        {skills.map((g) => (
+          <div class="skill-group">
+            <h3>{g.group}</h3>
+            <ul class="tags">{g.items.map((s) => <li>{s}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {site.offTheClock.show && (
+      <section class="wrap off" aria-label="Off the clock">
+        <p><strong>Off the clock:</strong> {site.offTheClock.text} {site.offTheClock.confirm && <Val v={site.offTheClock.confirm} />}</p>
+      </section>
+    )}
+
+    <!-- Contact -->
+    <section id="contact" class="wrap section contact">
+      <h2 class="section-title"><span>04</span> Contact</h2>
+      <p class="contact-lead">Hiring for backend or analytics engineering? Building something in e-commerce data? Say hi.</p>
+      <ul class="contact-list">
+        {site.links.map((l) => (
+          <li><span>{l.label}</span><a href={l.href}>{l.text}</a></li>
+        ))}
+        <li><span>Hyphunt</span><a href="https://www.instagram.com/hyphunt/">@hyphunt</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© {year} {site.name}</span>
+      <span>{site.footer.showHinglish ? site.footer.hinglish : site.footer.line}</span>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+      const dark = root.dataset.theme
+        ? root.dataset.theme === 'dark'
+        : matchMedia('(prefers-color-scheme: dark)').matches;
+      const next = dark ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch {}
+    });
+  </script>
+</Base>

@@ -1,0 +1,8 @@
+[
+  { "group": "Data / Analytics", "items": ["BigQuery", "Standard SQL", "Attribution modelling", "Recommendation logic", "Apache Parquet & compression"] },
+  { "group": "Backend", "items": ["Python (Flask)", "Redis", "PostgreSQL (Neon)", "MySQL", "REST & GraphQL APIs", "Webhooks"] },
+  { "group": "Platforms", "items": ["Shopify", "BigCommerce", "WooCommerce", "Magento", "Miva Merchant", "Shift4Shop / 3dcart"] },
+  { "group": "Infra", "items": ["Kubernetes (incl. OOM debugging)", "Cloudflare Tunnel", "Raspberry Pi self-hosting"] },
+  { "group": "Mobile / Frontend", "items": ["React", "Capacitor", "Capgo OTA", "App-store publishing"] },
+  { "group": "Practices", "items": ["RCA writing", "Incident debugging", "Ticket-driven delivery (ClickUp)"] }
+]
