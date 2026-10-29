@@ -1,0 +1,36 @@
+[
+  {
+    "company": "ConvertCart",
+    "role": "SDE 1",
+    "dates": "TODO(sahil): start month/year – present",
+    "summary": "E-commerce analytics & personalisation SaaS. I own the product's recommendation, reports and sync services.",
+    "bullets": [
+      "Built diversified recommendation result sets in BigQuery — per-category/type caps, variant de-duplication and product-liveness filtering for client accounts.",
+      "Migrated legacy SQL to Standard SQL across repositories and built month-wise session → order attribution models.",
+      "Integrated Shopify (GraphQL Admin API, metafields/filters, ScriptTag → Web Pixel migration), Miva Merchant price-group APIs and WooCommerce/Magento consent-data extraction.",
+      "Fixed 500s in BigCommerce delta sync on large payloads.",
+      "Mapped merchandiser cross-sell terms to Shopify collections through an alias layer that handles duplicate names and flags empty or missing collections.",
+      "Root-caused tracking and attribution discrepancies — missing page types, offline-vs-online revenue gaps, misrouted campaign email events — and wrote the client-facing RCAs.",
+      "Debug technical issues for clients across multiple storefront platforms."
+    ],
+    "metrics": "TODO(sahil): impact numbers (accounts served, query cost/latency wins, sync volume…)",
+    "tags": ["BigQuery", "SQL", "Shopify", "BigCommerce", "Miva", "WooCommerce", "Magento", "Kubernetes"]
+  },
+  {
+    "company": "Hyphunt",
+    "role": "Co-founder",
+    "dates": "TODO(sahil): start month/year – present",
+    "summary": "Real-world local discovery for urban India — Duolingo + Letterboxd + Strava for real-life experiences. Co-founded with Sandip.",
+    "link": { "href": "https://hyphunt.com", "text": "hyphunt.com" },
+    "bullets": [
+      "Built the stack end to end: Flask, Redis and Neon Postgres on the backend; React + Capacitor on mobile.",
+      "Self-host the backend on a Raspberry Pi behind Cloudflare Tunnel and ship over-the-air app updates with Capgo.",
+      "Hardened the backend with idempotent webhook processing and business entity resolution.",
+      "Designed swipe-deck discovery, a fog-of-war city map and the \"Street Brutalism\" design language (yes, this site borrows it).",
+      "Architected background location tracking and published to the Play Store and App Store.",
+      "Designed an Instagram bot that spots @hyphunt tags on reels and replies with place validation, and worked through Meta App Review for it.",
+      "Scoped a Gmail API → timesheet pipeline for internal tooling on the company Workspace."
+    ],
+    "tags": ["Flask", "Redis", "Postgres", "React", "Capacitor", "Cloudflare"]
+  }
+]

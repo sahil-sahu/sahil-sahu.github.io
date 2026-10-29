@@ -1,0 +1,30 @@
+{
+  "name": "Sahil Kumar Sahu",
+  "shortName": "Sahil",
+  "role": "Backend & Analytics Engineer",
+  "location": "Bhubaneswar, Odisha, India",
+  "pitch": "I build the data pipelines, recommendation systems and platform integrations behind e-commerce analytics — and I'm co-building a consumer app on the side.",
+  "siteUrl": "https://sahil-sahu.github.io",
+  "description": "Sahil Kumar Sahu — backend & analytics engineer. BigQuery recommendation systems, e-commerce platform integrations (Shopify, BigCommerce, WooCommerce, Miva) and co-founder of Hyphunt.",
+  "links": [
+    { "label": "Email", "href": "mailto:dev.sahilsahu@gmail.com", "text": "dev.sahilsahu@gmail.com" },
+    { "label": "GitHub", "href": "https://github.com/sahil-sahu", "text": "github.com/sahil-sahu" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/sahil-kumar-sahu-4a38801aa", "text": "in/sahil-kumar-sahu" }
+  ],
+  "resume": "TODO(sahil): resume PDF (drop it in /public and put the path here, e.g. /resume.pdf)",
+  "education": {
+    "degree": "B.Tech, Electronics & Instrumentation",
+    "school": "Odisha University of Technology and Research (formerly CET), Bhubaneswar",
+    "years": "TODO(sahil): years"
+  },
+  "offTheClock": {
+    "show": true,
+    "confirm": "TODO(sahil): confirm you want this shown",
+    "text": "Urdu/Hindi poetry & shayari, philosophy, and too much time reading about IEMs."
+  },
+  "footer": {
+    "line": "Built with Astro. No skill bars were harmed.",
+    "hinglish": "Bas itna hi. Chai pe milte hain.",
+    "showHinglish": false
+  }
+}

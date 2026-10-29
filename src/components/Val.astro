@@ -1,0 +1,6 @@
+---
+// Renders a content value; anything starting with "TODO(" shows as a visible placeholder.
+const { v } = Astro.props;
+const isTodo = typeof v === 'string' && v.startsWith('TODO(');
+---
+{isTodo ? <mark class="todo">{v}</mark> : <Fragment>{v}</Fragment>}
